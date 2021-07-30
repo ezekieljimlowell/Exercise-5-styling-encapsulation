@@ -7,19 +7,16 @@
 }
 
 .box--large {
-    background: orange;
     width: 270px;
     height: 270px;
 }
 
 .box--medium {
-    background: pink;
     width: 180px;
     height: 180px;
 }
 
 .box--small {
-    background: lightblue;
     width: 90px;
     height: 90px;
 }

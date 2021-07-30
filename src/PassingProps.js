@@ -1,20 +1,28 @@
+import './Exercise5.css';
 
-const Box = () => {
-    const props = { style: { fontStyle: "italic" } }
+const Box = ({style, className, ...Props}) => {
+    console.log(className);
     return (
-        <div>
-            <div {...props} className="box box--small">small lightblue box</div>
-            <div {...props} className="box box--medium">medium pink box</div>
-            <div {...props} className="box box--large">large orange box</div>
-            <div className="box" {...props}>sizeless box</div>
-        </div>
+        <div
+            className={`box ${className}`}
+            style={{ fontStyle: "italic", ...style }}
+            {...Props}
+        />
     )
 }
 
 export default function PassingProps() {
     return (
         <div>
-            <Box />
+            <Box className="box--small" style={{ background: "lightblue" }}>
+                small lightblue box
+            </Box>
+            <Box className="box--medium" style={{ background: "pink" }}>
+                medium pink box
+            </Box>
+            <Box className="box--large" style={{ background: "orange" }}>
+                large orange box
+            </Box>
         </div>
     )
 }
